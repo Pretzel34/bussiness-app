@@ -1,26 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Component } from 'react';
-import { render } from '@testing-library/react';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
+import Landing from './Components/landing';
+import { Container } from '@mui/system';
+import BusinessList from './Components/businessList';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
+function App() {
 
-
-class App extends Component {
-  render(){
-    return (
-      <div className="wrapper">
-        <Switch>
-
-        </Switch>
-      </div>
-    );
-  }
+  return (
+    <Container maxWidth="md">
+      <Routes>
+        <Route path='/home' element={<Landing/>}/>
+        <Route path='/business' element={<BusinessList />}/>
+        <Route path='*'
+          element={<Navigate to="/home" replace/>}
+         />
+      </Routes>
+    </Container>
+  );
 }
 
 export default App;
