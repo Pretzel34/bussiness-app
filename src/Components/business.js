@@ -26,7 +26,7 @@ const Business = ({data, id}) => {
         window.navigator.geolocation.getCurrentPosition(success, console.log);
     },[]);
     const goToBusiness = (data) => {
-        nav('/business', {state: {data}});
+        nav('/business/' + data.id, {state: {data}});
     }
 
     function calcDistance(bLat, bLong){

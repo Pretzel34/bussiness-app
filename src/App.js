@@ -10,7 +10,7 @@ function App() {
     <Container maxWidth="md">
       <Routes>
         <Route path='/home' element={<Landing/>}/>
-        <Route path='/business' element={<BusinessList />}/>
+        <Route path='/business/:id' element={<BusinessList />}/>
         <Route path='*'
           element={<Navigate to="/home" replace/>}
          />
