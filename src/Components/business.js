@@ -53,9 +53,9 @@ const Business = ({data, id}) => {
 
     return (
         <div>
-            <ListItem alignItems="flex-start" sx={{ placeContent: 'center center' }} >
+            <ListItem alignItems="flex-start" sx={{ placeContent: 'center center' }} onClick={() => goToBusiness(data[id])} >
                 
-                <ListItemAvatar sx={{ alignSelf: 'center', width: 80}} onClick={() => goToBusiness(data[id])}>
+                <ListItemAvatar sx={{ alignSelf: 'center', width: 80}} >
                     <Avatar alt="Remy Sharp" src={data[id].icon} sx={{width: 56, height: 56}}/>
                 </ListItemAvatar>
                 <div className="cont">
